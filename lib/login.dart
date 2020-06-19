@@ -14,7 +14,7 @@ class UserLogin extends StatelessWidget {
     print('Name: ${data.name}, Password: ${data.password}');
     return Future.delayed(loginTime).then((_) {
       if (!users.containsKey(data.name)) {
-        return 'Username not exists';
+        return 'Username is not registered';
       }
       if (users[data.name] != data.password) {
         return 'Password does not match';
@@ -35,7 +35,12 @@ class UserLogin extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: 'Primavera Online',
+      theme: LoginTheme(
+        titleStyle: TextStyle(
+          fontWeight: FontWeight.w400
+        )
+      ),
+      title: 'Strongmind',
       onLogin: _authUser,
       onSignup: _authUser,
       onSubmitAnimationCompleted: () {
