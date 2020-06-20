@@ -1,60 +1,67 @@
 import 'package:flutter/material.dart';
-import 'attendanceScreen.dart';
+import 'package:pohsattendance/dashboard.dart';
+
 /************ HOME ***************/
-class DashboardScreen extends StatefulWidget {
-  DashboardScreen({Key key}) : super(key: key);
+class AttendanceScreen extends StatefulWidget {
+  AttendanceScreen({Key key}) : super(key: key);
 
   @override
-  _DashboardScreenState createState() => _DashboardScreenState();
+  _AttendanceScreenState createState() => _AttendanceScreenState();
 }
 
 
-class _DashboardScreenState extends State<StatefulWidget>{
+class _AttendanceScreenState extends State<StatefulWidget>{
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Attendance',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Help',
-      style: optionStyle,
-    ),
-  ];
+//  static const List<Widget> _widgetOptions = <Widget>[
+//    Text(
+//      'Index 0: Home',
+//      style: optionStyle,
+//
+//    ),
+//    Text(
+//      'Index 1: Attendance',
+//      style: optionStyle,
+//    ),
+//    Text(
+//      'Index 2: Help',
+//      style: optionStyle,
+//    ),
+//  ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+
     });
+
     if ( index == 0){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => AttendanceScreen()));
+          builder: (context) => DashboardScreen()));
     }else if ( index == 1){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => AttendanceScreen()));
+
     };
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Parent Home'),
+        title: const Text('Attendance: Parent View'),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+//        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('Home'),
+
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.access_time),
