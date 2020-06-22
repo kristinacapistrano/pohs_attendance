@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pohsattendance/dashboard.dart';
+import 'file:///C:/Users/krist/StudioProjects/pohs_attendance/lib/screens/dashboard.dart';
 
 /************ HOME ***************/
 class AttendanceScreen extends StatefulWidget {
@@ -51,7 +51,7 @@ class _AttendanceScreenState extends State<StatefulWidget>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Attendance: Parent View'),
+        title: const Text('Attendance'),
       ),
       body: Center(
 //        child: _widgetOptions.elementAt(_selectedIndex),
