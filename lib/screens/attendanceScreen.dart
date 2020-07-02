@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/krist/StudioProjects/pohs_attendance/lib/screens/dashboard.dart';
 
@@ -14,26 +15,12 @@ class _AttendanceScreenState extends State<StatefulWidget>{
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-//  static const List<Widget> _widgetOptions = <Widget>[
-//    Text(
-//      'Index 0: Home',
-//      style: optionStyle,
-//
-//    ),
-//    Text(
-//      'Index 1: Attendance',
-//      style: optionStyle,
-//    ),
-//    Text(
-//      'Index 2: Help',
-//      style: optionStyle,
-//    ),
-//  ];
+
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-
+      print('tapped');
     });
 
     if ( index == 0){
@@ -49,12 +36,93 @@ class _AttendanceScreenState extends State<StatefulWidget>{
 
   @override
   Widget build(BuildContext context) {
+    const gap = 5.0;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Attendance'),
+        backgroundColor: Colors.lightGreen,
+        title: const Text('Parent Mode'),
       ),
-      body: Center(
-//        child: _widgetOptions.elementAt(_selectedIndex),
+      body: ListView(
+        padding: EdgeInsetsDirectional.only(top: 75),
+
+        children: <Widget>[
+
+          Text('Attendance',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 20,
+          ),),
+         DataTable(
+             horizontalMargin: 40,
+
+             columns: const <DataColumn>[
+               DataColumn(label: Text('Days')),
+               DataColumn(label: Text('Hours')),
+               DataColumn(label: Text('Minutes'))
+               ],
+           rows: const <DataRow>[
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Monday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             ),
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Tuesday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             ),
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Wednesday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             ),
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Thursday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             ),
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Friday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             ),
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Saturday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             ),
+             DataRow(
+               cells: <DataCell>[
+                 DataCell(Text('Sunday')),
+                 DataCell(Text('19')),
+                 DataCell(Text('19'))
+
+               ],
+             )
+           ]
+
+         )
+
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -72,7 +140,7 @@ class _AttendanceScreenState extends State<StatefulWidget>{
             title: Text('Help'),
           ),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: 1,
         selectedItemColor: Colors.green,
         onTap: _onItemTapped,
       ),

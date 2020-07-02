@@ -45,11 +45,18 @@ class _DashboardScreenState extends State<StatefulWidget>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Parent Home'),
+        backgroundColor: Colors.lightBlue,
+        title: const Text('Home'),
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: Column(
+        children: <Widget>[
+          Image.asset('assets/mascot1.png'),
+          Center(
+            child: _widgetOptions.elementAt(_selectedIndex),
+          ),
+        ],
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
