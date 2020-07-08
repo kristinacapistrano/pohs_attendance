@@ -41,7 +41,7 @@ class _AttendanceScreenState extends State<StatefulWidget>{
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
-        title: const Text('Parent Mode'),
+        title: const Text('Parent View'),
       ),
       body: ListView(
         padding: EdgeInsetsDirectional.only(top: 75),
@@ -120,9 +120,24 @@ class _AttendanceScreenState extends State<StatefulWidget>{
              )
            ]
 
-         )
+         ),
+
 
         ],
+      ),
+
+      floatingActionButton: Padding(
+
+        padding: const EdgeInsets.only(left: 40, right: 125, bottom: 50),
+        child: FloatingActionButton.extended(
+          onPressed: () {
+            // Add your onPressed code here!
+          },
+          label: Text('Approve'),
+          icon: Icon(Icons.thumb_up),
+          backgroundColor: Colors.red,
+
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
