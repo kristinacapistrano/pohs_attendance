@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/krist/StudioProjects/pohs_attendance/lib/screens/dashboard.dart';
+import 'package:pohsattendance/screens/helpScreen.dart';
 
 /************ HOME ***************/
 class AttendanceScreen extends StatefulWidget {
@@ -26,9 +27,9 @@ class _AttendanceScreenState extends State<StatefulWidget>{
     if ( index == 0){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => DashboardScreen()));
-    }else if ( index == 1){
+    }else if ( index == 2){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => AttendanceScreen()));
+          builder: (context) => HelpScreen()));
 
     };
 
@@ -41,10 +42,10 @@ class _AttendanceScreenState extends State<StatefulWidget>{
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
-        title: const Text('Parent View'),
+        title: const Text('Attendance: Parent View'),
       ),
       body: ListView(
-        padding: EdgeInsetsDirectional.only(top: 75),
+        padding: EdgeInsetsDirectional.only(top: 50),
 
         children: <Widget>[
 
@@ -128,10 +129,10 @@ class _AttendanceScreenState extends State<StatefulWidget>{
 
       floatingActionButton: Padding(
 
-        padding: const EdgeInsets.only(left: 40, right: 125, bottom: 50),
+        padding: const EdgeInsets.only(left: 40, right: 125, bottom: 0),
         child: FloatingActionButton.extended(
           onPressed: () {
-            // Add your onPressed code here!
+            print('Approved');
           },
           label: Text('Approve'),
           icon: Icon(Icons.thumb_up),
