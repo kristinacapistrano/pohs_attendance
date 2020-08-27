@@ -1,6 +1,6 @@
 # pohsattendance
 
-A high school mobile application that will focus on approving student attendance..
+A high school mobile application that will focus on approving student attendance.
 
 ![login](assets/login.png) 
 ![home](assets/home.png)
