@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "925250575106",
-    "firebase_url": "https://pohs-attendance.firebaseio.com",
-    "project_id": "pohs-attendance",
-    "storage_bucket": "pohs-attendance.appspot.com"
+    "project_number": "88610784589",
+    "firebase_url": "https://prox1-26d06.firebaseio.com",
+    "project_id": "prox1-26d06",
+    "storage_bucket": "prox1-26d06.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:925250575106:android:3aa933387b91efe9fc401b",
+        "mobilesdk_app_id": "1:88610784589:android:62a2eaf887dd0b109ae304",
         "android_client_info": {
           "package_name": "edu.kcapist1.pohsattendance"
         }
       },
       "oauth_client": [
         {
-          "client_id": "925250575106-hdr8k75k42jc537c89svvj0c38mo80ge.apps.googleusercontent.com",
+          "client_id": "88610784589-fgalnr39f1u3mnn7gpbpnabavirinq73.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCGQ1MVFDfj_3BaFn7JELHmUtUb1Y_6NyY"
+          "current_key": "AIzaSyA6a7dGqTd9EOhyLYK40SyNE4djX6q8pqs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "925250575106-hdr8k75k42jc537c89svvj0c38mo80ge.apps.googleusercontent.com",
+              "client_id": "88610784589-fgalnr39f1u3mnn7gpbpnabavirinq73.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
